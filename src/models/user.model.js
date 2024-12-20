@@ -19,15 +19,23 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    refreshToken: {
+      type: String,
+    },
     lastLogin: {
       type: String,
       default: new Date().toLocaleDateString(),
     },
     generateEmailVerifyOtp: {
       type: String,
-      default: 0,
     },
     emailVerifyOtpExpiresAt: {
+      type: Date,
+    },
+    resetPasswordOtp: {
+      type: String,
+    },
+    resetPasswordExpiresAt: {
       type: Date,
     },
   },
